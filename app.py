@@ -251,6 +251,21 @@ footer {
     color: #1e293b !important;
 }
 
+/* Improve Streamlit alert visibility in both light and dark browser themes */
+[data-testid="stAlert"] {
+    background-color: #ecfdf5 !important;
+    border: 1px solid #86efac !important;
+    border-radius: 12px !important;
+}
+
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] span,
+[data-testid="stAlert"] div,
+[data-testid="stAlert"] li {
+    color: #14532d !important;
+    opacity: 1 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
