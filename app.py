@@ -575,6 +575,13 @@ st.markdown("---")
 
 st.header("📤 Upload Your Resume")
 
+st.info(
+    "Privacy note: Your uploaded resume is processed for this session. "
+    "Its extracted text is sent to Google Gemini only when you click "
+    "\"Analyze Resume with AI\". Do not upload documents containing "
+    "information you do not want processed by this service."
+)
+
 uploaded_file = st.file_uploader(
     "Choose your resume PDF",
     type=["pdf"],
@@ -1058,7 +1065,7 @@ if uploaded_file is not None:
                 try:
 
                     response = client.models.generate_content(
-                        model="gemini-3.6-flash",
+                        model="gemini-3.8-flash",
                         contents=prompt
                     )
 
